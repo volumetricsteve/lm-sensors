@@ -29,13 +29,16 @@ At the top of the Makefile are a couple of configuration variables that
 you may want to change. There's a description of what each variable does
 in the Makefile itself.
 
-Compilation is done by `make all'. You will get a lot of warnings about
-files which are not found, all ending in `.*d'. You can safely ignore
-this; they contain dependency information, which is regenerated on the
-spot.
+make
+
+NOTE: You will get a lot of warnings about files which are not found, all ending in `.*d'. You can safely ignore this; they contain dependency information, which is regenerated on the spot.
+
+chmod +x static-build.sh
+./static-build.sh
+
+You can safely copy prog/sensors/sensors to /bin/ or /usr/bin/ if you prefer, 'make install' isn't necessary if you only want 'sensors'
 
 `make install' installs the package (to /usr/local by default).
-
 
 Kernel configuration
 ====================
