@@ -22,6 +22,19 @@ The directories within this package:
     sensor limits.
   - sensord: A daemon to watch sensor values and log problems. It
     includes RRD support.
+    
+    
+VOLUMETRICSTEVE'S MODIFICATIONS
+-------------------------------
+
+I don't know what 95% of the code in this package does.  Years ago, when 
+I started using lm-sensors, I'd watch 'make' fly and fill the screen with 
+flex, bison, and gcc stdouts.  When I looked at the actual code for 'sensors' 
+it's very little code and very few files - I wondered why all the other stuff 
+was even necessary.  It turns out, if you only want 'sensors' you really only 
+need libsensors.a and the contents of prog/sensors/ so my static-build.sh 
+uses pretty much just that.  This means when you're done building, the only 
+new file you're adding to your system is 'sensors'.  Nothing else is needed.
 
 
 INSTALLING LM-SENSORS
